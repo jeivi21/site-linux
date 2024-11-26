@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--cor-04);
+}
+
+
+:root {
+    --cor-01: #49bd52;
+    --cor-02: #000;
+    --cor-03: #CCC;
+    --cor-04: #FFF;
+}
+
+.background {
+    position: fixed; /* Usa fixed para garantir que o vídeo sempre preencha a tela */
+    top: 0;          /* Alinha ao topo */
+    left: 0;         /* Alinha à esquerda */
+    width: 100vw;    /* Ocupa toda a largura da viewport */
+    height: 100vh;   /* Ocupa toda a altura da viewport */
+    object-fit: cover; /* Ajusta para cobrir o espaço sem distorção */
+    z-index: -1;     /* Mantém o vídeo atrás de outros elementos */
+    overflow: hidden; /* Evita qualquer overflow desnecessário */
+}
+
+#inicio img {
+    margin-top: 100px;
+}
+
+body {
+    background: linear-gradient(to left, #49bd52, black);
+
+}
+
+#cabecalho {
+    background-color: var(--cor-02);    
+}
+
+#cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cabecalho #logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 12px;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul a {
+    color: var(--cor-04);
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    transition: all 0.3s linear;
+}
+
+#menu ul a:hover {
+    background-color: var(--cor-01);
+}
+
+#menu .submenu {
+    position: absolute;
+    display: none;
+    background-color: var(--cor-02);
+    z-index: 1;
+}
+
+#menu li:hover .submenu {
+    display: block;
+}
+
+#historia {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#historia img {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+#historia p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#rodape {
+    text-align: center;
+    color: var(--cor-04);
+    padding: 30px;
+    background-color: var(--cor-02);
+}
+
+#rodape a {
+    color: var(--cor-04);
+    text-decoration: none;
+}
+
+#rodape a:hover {
+    text-decoration: underline;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#videos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+#menu .submenu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+#menu .submenu li img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+#inicio {
+    text-align: center;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+#historia {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#historia.show {
+    opacity: 1;
+}
+
+#distro {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+#distro img {
+    float: left;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    object-fit: contain;
+}
+
+.titulo1 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.conteudo p, .conteudo li{
+    padding-bottom: 10px;
+    list-style: circle;
+}
